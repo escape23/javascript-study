@@ -105,13 +105,13 @@
 // Потрібно створити функцію яка буде приймати 1 параметр
 // Функція повина відібрати з масиву тільки ті елементи що дублюються в ньому та повернути їх в вигляді нового масиву як результат виконання функції
 
-function getCommonElements(arr) { 
-    const duplicates = [];
-    for (let i = 0; i < arr.length; i += 1){
-        if (arr.includes(arr[i], i += 1)) {
-            duplicates.push(arr[i]);
-        }
-    }
-    return duplicates;
-}
-console.log(getCommonElements([1, 2, 3, 2, 17, 1, 17, 2, 19]));
+// function getCommonElements(arr) { 
+//     const duplicates = [];
+//     for (let i = 0; i < arr.length; i += 1){
+//         if (arr.includes(arr[i], i += 1)) {
+//             duplicates.push(arr[i]);
+//         }
+//     }
+//     return duplicates;
+// }
+// console.log(getCommonElements([1, 2, 3, 2, 17, 1, 17, 2, 19]));
