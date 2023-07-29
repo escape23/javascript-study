@@ -68,18 +68,18 @@
 // withdraw(100, 300); // "Операція зняття коштів проведена"
 
 
-const globalValue = 10;
+// const globalValue = 10;
 
-console.log(globalValue); // 10
+// console.log(globalValue); // 10
 
-function foo() {
-  console.log(globalValue); // 10
-}
+// function foo() {
+//   console.log(globalValue); // 10
+// }
 
-for (let i = 0; i < 5; i++) {
-  console.log(globalValue); // 10
+// for (let i = 0; i < 5; i++) {
+//   console.log(globalValue); // 10
 
-  if (i === 2) {
-    console.log(globalValue); // 10
-  }
-}
+//   if (i === 2) {
+//     console.log(globalValue); // 10
+//   }
+// }

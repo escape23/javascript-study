@@ -115,3 +115,11 @@
 //     return duplicates;
 // }
 // console.log(getCommonElements([1, 2, 3, 2, 17, 1, 17, 2, 19]));
+
+// function slugify(title) {
+//   // Change code below this line
+//   let words = title.toLowerCase;
+//   let titleWords = words.split(" ");
+//   let slug  = titleWords.join("-")
+//   // Change code above this line
+// }
