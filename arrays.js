@@ -123,3 +123,108 @@
 //   let slug  = titleWords.join("-")
 //   // Change code above this line
 // }
+
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//     let result
+//     const newArray = firstArray.concat(secondArray);
+//     if (newArray.length > maxLength) {
+//         result = newArray.slice(0, maxLength);
+//     }
+//     else {
+//         return newArray;
+//     }
+//     return result;
+// }
+// let finish = makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
+// console.log(finish)
+// finish = makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4);
+// console.log(finish)
+// finish = makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3);
+// console.log(finish)
+// finish = makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2);
+// console.log(finish)
+// finish = makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4);
+// console.log(finish)
+// finish = makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0);
+// console.log(finish)
+
+// for (let i = 0; i <= 20; i += 5) {
+//   console.log(i);
+// }
+
+// function calculateTotal(number) {
+// let totalSum = 0;
+//  for (i = 1; i <= number; i += 1) {
+//         const newSum = i + totalSum;
+//         totalSum = newSum;
+//     }
+// return totalSum;
+// }
+
+
+// const planets = ["Earth", "Mars", "Venus"];
+
+// for (let i = 0; i < planets.length; i += 1) {
+//   console.log(planets[i]);
+// }
+
+
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   for (let i = 0; i < order.length; i += 1) {
+//   const newTotal = order[i] + total;
+//     total = newTotal;
+//   }
+//   return total;
+// }
+
+// let result = calculateTotalPrice([12, 85, 37, 4]);
+// console.log(result)
+
+
+
+
+
+// function findLongestWord(string) {
+//     let newArray = string.split(" ");
+//     let wordLength = 0;
+//     let longestWord;
+//     console.log(newArray);
+//     for (let i = 0; i < newArray.length; i += 1) {
+//         wordLength = newArray[i]
+        
+//         if (newArray[i].length > wordLength) {
+//             longestWord = newArray[i];
+//             return longestWord;
+//         }
+//     }
+// }
+
+
+//Пошук найдовшого слова!!!!!
+function findLongestWord(string) {
+  // Change code below this line
+  let arrStr = string.split(' ');
+  let wordLength = 0;
+  let longestWord;
+
+  for (let i = 0; i < arrStr.length; i += 1) {
+    wordLength = arrStr[1].length;
+
+    if (arrStr[i].length > wordLength) {
+      longestWord = arrStr[i];
+
+      return longestWord;
+    }
+  }
+}
+let result = findLongestWord("The quick brown fox jumped over the lazy dog");
+console.log(result);
+result = findLongestWord("Google do a roll");
+console.log(result);
+result = findLongestWord("May the force be with you");
+console.log(result);
+result = findLongestWord("ffhfhfhfh jf joro");
+console.log(result);
