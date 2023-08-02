@@ -204,27 +204,43 @@
 
 
 //Пошук найдовшого слова!!!!!
-function findLongestWord(string) {
-  // Change code below this line
-  let arrStr = string.split(' ');
-  let wordLength = 0;
-  let longestWord;
+// function findLongestWord(string) {
+//   // Change code below this line
+//   let arrStr = string.split(' ');
+//   let wordLength = 0;
+//   let longestWord;
 
-  for (let i = 0; i < arrStr.length; i += 1) {
-    wordLength = arrStr[1].length;
+//   for (let i = 0; i < arrStr.length; i += 1) {
+//     wordLength = arrStr[1].length;
 
-    if (arrStr[i].length > wordLength) {
-      longestWord = arrStr[i];
+//     if (arrStr[i].length > wordLength) {
+//       longestWord = arrStr[i];
 
-      return longestWord;
-    }
-  }
-}
-let result = findLongestWord("The quick brown fox jumped over the lazy dog");
-console.log(result);
-result = findLongestWord("Google do a roll");
-console.log(result);
-result = findLongestWord("May the force be with you");
-console.log(result);
-result = findLongestWord("ffhfhfhfh jf joro");
-console.log(result);
+//       return longestWord;
+//     }
+//   }
+// }
+// let result = findLongestWord("The quick brown fox jumped over the lazy dog");
+// console.log(result);
+// result = findLongestWord("Google do a roll");
+// console.log(result);
+// result = findLongestWord("May the force be with you");
+// console.log(result);
+// result = findLongestWord("ffhfhfhfh jf joro");
+// console.log(result);
+
+
+
+
+
+// const clients = ["Mango", "Ajax", "Poly"];
+
+// for (const client of clients) {
+//   console.log(client);
+// }
+
+// const string = "javascript";
+
+// for (const character of string) {
+//   console.log(character);
+// }
