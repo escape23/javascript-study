@@ -84,3 +84,76 @@
 
 // const keys = Object.keys(book);
 // console.log(keys); // ['title', 'author', 'genres', 'rating']
+
+// const x = {};
+
+// const fn = function (myObject) {
+//     console.log(myObject)
+// };
+
+// fn({ a: 1, b: 2, });
+
+
+
+
+// const playlist = {
+//     name: "My favorite playlist",
+//     rating: 9.5,
+//     tracks: ['Everyday', 'Fashion killa', 'Sundress'],
+//     trackCount: 3,
+// };
+
+
+// console.log(playlist);
+
+// const propertyName = 'tracks';
+
+// // console.log(playlist.rating)
+// // console.log(playlist['rating'])
+
+// console.log(playlist.propertyName);
+// console.log(playlist[propertyName]);
+
+
+// const username = 'Mango';
+// const email = 'mango@mail.com';
+// const color = 'black';
+
+// const signupData = {
+//     username,
+//     email,
+//     color,
+// }
+
+// console.log(signupData) 
+
+
+const playlist = {
+    name: "My favorite playlist",
+    rating: 9.5,
+    tracks: ['Everyday', 'Fashion killa', 'Sundress'],
+    changeName(newName) {
+        console.log('this inside changeName: ', this);
+        this.name = newName;
+    },
+    addTrack(track) {
+        this.tracks.push(track);
+    },
+    updateRating(newRating) {
+        this.rating = newRating;
+    },
+    getTrackCount() {
+        return this.tracks.length;
+    }
+};
+
+playlist.changeName('Valera');
+console.log(playlist);
+
+playlist.addTrack('XO life');
+console.log(playlist)
+
+playlist.updateRating(6);
+console.log(playlist)
+
+
