@@ -128,32 +128,188 @@
 // console.log(signupData) 
 
 
-const playlist = {
-    name: "My favorite playlist",
-    rating: 9.5,
-    tracks: ['Everyday', 'Fashion killa', 'Sundress'],
-    changeName(newName) {
-        console.log('this inside changeName: ', this);
-        this.name = newName;
-    },
-    addTrack(track) {
-        this.tracks.push(track);
-    },
-    updateRating(newRating) {
-        this.rating = newRating;
-    },
-    getTrackCount() {
-        return this.tracks.length;
-    }
-};
 
-playlist.changeName('Valera');
-console.log(playlist);
+/*      МЕТОДИ ОБʼЄКТА           */
 
-playlist.addTrack('XO life');
-console.log(playlist)
+// const playlist = {
+//     name: "My favorite playlist",
+//     rating: 9.5,
+//     tracks: ['Everyday', 'Fashion killa', 'Sundress'],
+//     changeName(newName) {
+//         console.log('this inside changeName: ', this);
+//         this.name = newName;
+//     },
+//     addTrack(track) {
+//         this.tracks.push(track);
+//     },
+//     updateRating(newRating) {
+//         this.rating = newRating;
+//     },
+//     getTrackCount() {
+//         return this.tracks.length;
+//     }
+// };
 
-playlist.updateRating(6);
-console.log(playlist)
+// console.log(playlist.getTrackCount())
+
+// playlist.changeName('Valera');
+// console.log(playlist);
+
+// playlist.addTrack('XO life');
+// console.log(playlist)
+
+// playlist.updateRating(6);
+// console.log(playlist)
+
+/* Перебір масива */
+// const feedback = {
+//     good: 5,
+//     neutral: 10,
+//     bad: 3,
+// };
+
+// let totalFeedback = 0;
+
+// const keys = Object.keys(feedback);
+// console.log(keys)
+
+// for (const key of keys) {
+//     console.log(feedback[key])
+//     totalFeedback += feedback[key]
+// }
+
+// console.log(totalFeedback)
+
+// const values = Object.values(feedback)
+// console.log(values)
+
+// for (const value of values) {
+//     console.log(value)
+// }
 
 
+// const friends = [
+//     { name: 'Mango', online: false, },
+//     { name: 'Kiwi', online: true, },
+//     { name: 'Poly', online: true, },
+//     { name: 'Ajax', online: false, }
+// ]
+// // console.table(friends)
+
+
+// const findFriendByName = function (allFriends, friendName) {
+//     for (const friend of friends) {
+//         // console.log(friend)
+//         console.log(friend.name);
+//         if (friend.name === friendName) {
+//             return 'YESSSIR';
+//         } 
+//     }
+//     return 'Nei';
+// }
+
+// console.log(findFriendByName(friends, 'Poly'))
+// console.log(findFriendByName(friends, 'Chelsy'))
+
+
+// const getAllNames = function (allFriends) {
+//     const names = []
+//     for (const friend of allFriends) {
+//         console.log(friend.name);
+//         names.push(friend.name);
+//     }
+//     return names;
+// }
+// console.log(getAllNames(friends))
+
+
+
+// const getOnlineFriends = function (allFriends) {
+//     const onlineFriends = [];
+//     for (const friend of allFriends) {
+//         console.log(friend);
+//         console.log(friend.online);
+//         if (friend.online) {
+//             onlineFriends.push(friend)
+//         }
+//     }
+//     return onlineFriends;
+// }
+// console.log(getOnlineFriends(friends));
+
+
+
+// const getOfflineFriends = function (allFriends) {
+//     const offlineFriends = [];
+//     for (const friend of allFriends) {
+//         console.log(friend);
+//         console.log(friend.online);
+//         if (!friend.online) {
+//             offlineFriends.push(friend)
+//         }
+//     }
+//     return offlineFriends;
+// }
+// console.log(getOfflineFriends(friends));
+
+
+
+// const cart = {
+//     items: [],
+
+// }
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Change code below this line
+// for (const color of colors) {
+//     hexColors.push(color.hex)
+//     rgbColors.push(color.rgb)
+//     console.log(color.hex)
+// }
+
+
+
+
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// // Change code below this line
+
+// const { today: {highToday, lowToday, }, 
+//        tomorrow: {highTomorrow, lowTomorrow}, 
+//     icon: { tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+//         todayIcon = "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg" }, } = highTemperatures;
+
+
+
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// // Change code below this line
+
+// const { today: { low: lowToday, high: highToday, icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+// icon: tomorrrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",}, tomorrow: { low: lowTomorrow, high: highTomorrow}, } = highTemperatures;
