@@ -93,7 +93,8 @@ const addArro2 = (a, b, c) => {
     return a + b + c;
 }
 
-const addArrow = (a, b, c) =>  a + b + c;
+const addArrow = (...args) =>  console.log(...args);
 
 
 console.log(add(5, 10, 15));
+console.log(addArrow(5, 10, 15));
