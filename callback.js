@@ -47,22 +47,25 @@
 // } )
 
 
-// const filter = function (array, test) {
+// const filter = (array, test) => {
 //     const filteredArray = [];
 
 //     for (const el of array) {
 //         console.log(el);
 //         console.log(test(el));
+//         const passed = test(el)
+
+//         if (passed) {
+//             filteredArray.push(el);
+//         }
 //     }
 //     return filteredArray;
 // }
 
 
-// const callback1 = function (value) {
-//     return value >= 3;
-// };
+// // const callback1 = value =>  value >= 3;
 
-// const r1 = filter([1, 2, 3, 4, 5], callback1);
+// const r1 = filter([1, 2, 3, 4, 5], value => value >= 3);
 // console.log(r1);
 
 
@@ -83,18 +86,18 @@
 // console.log(fnB);
 
 
-const add = function (a, b, c) {
-    console.log(a, b, c);
-    return a + b + c;
-}
+// const add = function (a, b, c) {
+//     console.log(a, b, c);
+//     return a + b + c;
+// }
 
-const addArro2 = (a, b, c) => {
-    console.log(a, b, c);
-    return a + b + c;
-}
+// const addArro2 = (a, b, c) => {
+//     console.log(a, b, c);
+//     return a + b + c;
+// }
 
-const addArrow = (...args) =>  console.log(...args);
+// const addArrow = (...args) =>  console.log(...args);
 
 
-console.log(add(5, 10, 15));
-console.log(addArrow(5, 10, 15));
+// console.log(add(5, 10, 15));
+// console.log(addArrow(5, 10, 15));
