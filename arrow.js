@@ -57,18 +57,18 @@
 // add1(2, 3, 4, 5, 6)
 
 
-const user = {
-    fullName: 'Mango',
-    showName() {
-        console.log('this: ', this)
-        console.log('this name: ', this.fullName)
+// const user = {
+//     fullName: 'Mango',
+//     showName() {
+//         console.log('this: ', this)
+//         console.log('this name: ', this.fullName)
 
-        const inner =  () => {
-            console.log('this in inner: ', this)
-        }
+//         const inner =  () => {
+//             console.log('this in inner: ', this)
+//         }
 
-        inner()
-    }
-}
+//         inner()
+//     }
+// }
 
-user.showName();
+// user.showName();
