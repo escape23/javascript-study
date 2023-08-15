@@ -80,11 +80,8 @@
 
 const numbers = [5, 10, 15, 20, 25];
 
-const filteredNumbers = numbers.filter(number => {
-    console.log(number);
-    return number > 15;
-})
-console.log(filteredNumbers)
+const filteredNumbers = numbers.filter(number =>  number < 10 || number > 20)
+// console.log(filteredNumbers)
 
 const players = [
   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
@@ -93,3 +90,38 @@ const players = [
   { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
   { id: 'player-5', name: 'Chelsy', timePlayed: 280, points: 48, online: true },
 ];
+
+const onlinePlayers = players.filter(player => player.online)
+// console.log(onlinePlayers)
+
+const offlinePlayers = players.filter(player => !player.online)
+
+
+const hardPlayers = players.filter(player => player.timePlayed > 250)
+// console.log(hardPlayers)
+
+/*
+* Завдання масив жанрів з унікальними значеннями(без повторів)
+*/
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction", "mysticism"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism", "adventure"],
+//   },
+// ];
+
+// const allGenres = books.flatMap(book => book.genres);
+// const uniqueGenres = allGenres.filter(
+//   (genre, index, array) => array.indexOf(genre) === index
+// );
