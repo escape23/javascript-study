@@ -166,16 +166,16 @@
  * - Возвращает true если все элементы массива удовлетворяют условию
  */
 
-const players = [
-  { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: true },
-  { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: false },
-  { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true },
-  { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
-  { id: 'player-5', name: 'Chelsy', timePlayed: 280, points: 48, online: true },
-];
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: true },
+//   { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: false },
+//   { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true },
+//   { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+//   { id: 'player-5', name: 'Chelsy', timePlayed: 280, points: 48, online: true },
+// ];
 
 
-const isAllOnline = players.every(player => player.online);
+// const isAllOnline = players.every(player => player.online);
 // console.log(isAllOnline)
 
 
@@ -184,10 +184,10 @@ const isAllOnline = players.every(player => player.online);
  * - Поэлементо перебирает оригинальный массив
  * - Возвращает true если хотя бы один элемент массива удовлетворяет условию
  */
-const isAnyOnline = players.some(player => player.online);
+// const isAnyOnline = players.some(player => player.online);
 // console.log('isAnyOnline', isAnyOnline)
 
-const anyHardcorePlayers = players.some(player => player.timePlayed > 300);
+// const anyHardcorePlayers = players.some(player => player.timePlayed > 300);
 // console.log(anyHardcorePlayers)
 
 
@@ -198,4 +198,89 @@ const anyHardcorePlayers = players.some(player => player.timePlayed > 300);
  * - Заменяет всё на свете, но использовать нужно с умом
  */
 
-const numbers = [5, 10, 15, 20, 25];
+// const numbers = [5, 10, 15, 20, 25];
+
+// const total = numbers.reduce((acc, number) =>  acc + number, 0)
+// console.log(total)
+
+// accumulator = 0 -> number = 5 -> return 0 + 5
+// accumulator = 5 -> number = 10 -> return 5 + 10
+// accumulator = 15 -> number = 15 -> return 15 + 15
+// accumulator = 30 -> number = 20 -> return 30 + 20
+// accumulator = 50 -> number = 25 -> return 50 + 25
+
+
+// const salary = {
+//     mango: 100,
+//     poly: 50,
+//     ajax: 150,
+// };
+
+// const totalSalary = Object.values(salary).reduce((total, value) => total  + value, 0)
+// console.log(totalSalary)
+
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, online: false },
+//   { id: 'player-2', name: 'Poly', timePlayed: 470, online: true },
+//   { id: 'player-3', name: 'Kiwi', timePlayed: 230, online: true },
+//   { id: 'player-4', name: 'Ajax', timePlayed: 150, online: false },
+//   { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
+// ];
+
+// const totalTimePlayed = players.reduce((total, player) => {
+    // return total + player.timePlayed;
+// }, 0)
+// console.log(totalTimePlayed)
+
+
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+
+// const totalAveragePlaytimePerGame = players.reduce((total, player) =>
+//     (total + player.playtime) / player.gamesPlayed, 0
+// );
+    
+// console.log(totalAveragePlaytimePerGame)
+
+
+
+// const cart = [
+//   { label: 'Apples', price: 100, quantity: 2 },
+//   { label: 'Bananas', price: 120, quantity: 3 },
+//   { label: 'Lemons', price: 70, quantity: 4 },
+// ];
+
+// const totalAmount = cart.reduce((total, item) => {
+//     return total + item.price * item.quantity;
+// }, 0)
+// console.log(totalAmount)
+
+/*
+ * Собираем все теги из твитов
+ */
+
+const tweets = [
+  { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+  { id: '001', likes: 2, tags: ['html', 'css'] },
+  { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+  { id: '003', likes: 8, tags: ['css', 'react'] },
+  { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+];
+
+/*
+ * Метод для розглажування масивів(обидва працює). 
+ */
+const allTags = tweets.reduce((tags, tweet) => {
+    tags.push(...tweet.tags)
+
+    return tags;
+}, [])
+console.log(allTags)
+
+
+const tags = tweets.flatMap(tweet => tweet.tags)
+console.log(tags)
