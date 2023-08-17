@@ -263,24 +263,155 @@
  * Собираем все теги из твитов
  */
 
-const tweets = [
-  { id: '000', likes: 5, tags: ['js', 'nodejs'] },
-  { id: '001', likes: 2, tags: ['html', 'css'] },
-  { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
-  { id: '003', likes: 8, tags: ['css', 'react'] },
-  { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
-];
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
 
 /*
  * Метод для розглажування масивів(обидва працює). 
  */
-const allTags = tweets.reduce((tags, tweet) => {
-    tags.push(...tweet.tags)
+// const allTags = tweets.reduce((tags, tweet) => {
+//     tags.push(...tweet.tags)
 
-    return tags;
-}, [])
-console.log(allTags)
+//     return tags;
+// }, [])
+// console.log(allTags)
+
+// acc = [], tweet.tags = ['js', 'nodejs'] return [...[], ...['js', 'nodejs']]
+// acc = ['js', 'nodejs'] tweet.tags ['html', 'css']
+// return  [...['js', 'nodejs'], ...['html', 'css']]
+//  ['js', 'nodejs', 'html', 'css']
+
+// const tags = tweets.flatMap(tweet => tweet.tags)
+// console.log(tags)
+
+// const tagStats = allTags.reduce((acc, tag) => {
+//     console.log(acc);
+
+//     if (acc[tag]) {
+//         acc[tag] += 1;
+
+//         return acc;
+//     }
+//     acc[tag] = 1;
+//     return acc;
+// },{})
 
 
-const tags = tweets.flatMap(tweet => tweet.tags)
-console.log(tags)
+/*
+ * Array.prototype.sort(callback(currentEl, nextEl){})
+ * - Сортирует и ИЗМЕНЯЕТ оригинальный массив
+ * - По умолчанию:
+ *    - сортирует по возрастанию
+ *    - приводит элементы к строке и сортирует по [Unicode](https://unicode-table.com/en/)
+ */
+
+const numbers = [1, 9, 6, 2, 3];
+// numbers.sort();
+// console.log(numbers);
+
+// const letters = ['b', 'B', 'a', 'A'];
+// letters.sort();
+// console.log('letters', letters);
+
+
+/*
+ * compareFunction - функция сравнения (callback)
+ * Элементы массива сортируются в соответствии с её возвращаемым значением
+ *  - eсли compareFunction(A, B) меньше 0, сортировка поставит A перед B
+ *  - если compareFunction(A, B) больше 0, сортировка поставит B перед A
+ *  - если compareFunction(A, B) вернёт 0, сортировка оставит A и B на неизменными по отношению друг к другу, но отсортирует их по отношению ко всем другим элементам.
+ */
+// numbers.sort((curEl, nexEl) => {
+//     return curEl - nexEl
+// });
+
+// console.log(numbers)
+
+/*
+ * Как сделать копию массива чтобы не сортировать оригинальный
+ * - Array.prototype.slice()
+ * - Операция spread!!!!!!
+ */
+
+// const copy = [...numbers];
+// console.log(copy === numbers )
+
+
+
+
+const users = [
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    gender: "male"
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    gender: "female"
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    gender: "male"
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    gender: "female"
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    gender: "male"
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    gender: "male"
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    gender: "female"
+  }
+]
+
+const sortByAscendingBalance = users => {
+    const ascendingBalance = [...users].sort((number1, number2) => number1.balance.localeCompare(number2.balance));
+    return ascendingBalance;
+}
+console.log(ascendingBalance)
