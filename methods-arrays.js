@@ -310,7 +310,7 @@
  *    - приводит элементы к строке и сортирует по [Unicode](https://unicode-table.com/en/)
  */
 
-const numbers = [1, 9, 6, 2, 3];
+// const numbers = [1, 9, 6, 2, 3];
 // numbers.sort();
 // console.log(numbers);
 
@@ -341,77 +341,27 @@ const numbers = [1, 9, 6, 2, 3];
 // const copy = [...numbers];
 // console.log(copy === numbers )
 
+// const descSortedNumbers = [...numbers].sort((a, b) => b - a);
+// const ascSortedNumbers = [...numbers].sort((a, b) => a - b);
+// console.log('descSortedNumbers', descSortedNumbers);
+// console.log('ascSortedNumbers', ascSortedNumbers);
 
 
+/*
+ * Кастомная сортировка сложных типов
+ */
+// const players = [
+    // { id: 'player-1', name: 'Mango', timePlayed: 310, online: false },
+//     { id: 'player-2', name: 'Poly', timePlayed: 470, online: true },
+//     { id: 'player-3', name: 'Aiwi', timePlayed: 230, online: true },
+//     { id: 'player-4', name: 'Ajax', timePlayed: 150, online: false },
+//     { id: 'player-5', name: 'Chelsey', timePlayed: 80, online: true },
+// ];
 
-const users = [
-  {
-    name: "Moore Hensley",
-    email: "moorehensley@indexia.com",
-    eyeColor: "blue",
-    friends: ["Sharron Pace"],
-    isActive: false,
-    balance: 2811,
-    gender: "male"
-  },
-  {
-    name: "Sharlene Bush",
-    email: "sharlenebush@tubesys.com",
-    eyeColor: "blue",
-    friends: ["Briana Decker", "Sharron Pace"],
-    isActive: true,
-    balance: 3821,
-    gender: "female"
-  },
-  {
-    name: "Ross Vazquez",
-    email: "rossvazquez@xinware.com",
-    eyeColor: "green",
-    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-    isActive: false,
-    balance: 3793,
-    gender: "male"
-  },
-  {
-    name: "Elma Head",
-    email: "elmahead@omatom.com",
-    eyeColor: "green",
-    friends: ["Goldie Gentry", "Aisha Tran"],
-    isActive: true,
-    balance: 2278,
-    gender: "female"
-  },
-  {
-    name: "Carey Barr",
-    email: "careybarr@nurali.com",
-    eyeColor: "blue",
-    friends: ["Jordan Sampson", "Eddie Strong"],
-    isActive: true,
-    balance: 3951,
-    gender: "male"
-  },
-  {
-    name: "Blackburn Dotson",
-    email: "blackburndotson@furnigeer.com",
-    eyeColor: "brown",
-    friends: ["Jacklyn Lucas", "Linda Chapman"],
-    isActive: false,
-    balance: 1498,
-    gender: "male"
-  },
-  {
-    name: "Sheree Anthony",
-    email: "shereeanthony@kog.com",
-    eyeColor: "brown",
-    friends: ["Goldie Gentry", "Briana Decker"],
-    isActive: true,
-    balance: 2764,
-    gender: "female"
-  }
-]
 
-const sortByAscendingBalance = users => {
-    const ascendingBalance = [...users].sort((number1, number2) => number1.balance.localeCompare(number2.balance));
-    return ascendingBalance;
-}
-console.log(ascendingBalance)
+// const sortedByBestPlayers = [...players].sort(
+    // (prevPlayer, nextPlayer) => nextPlayer.timePlayed - prevPlayer.timePlayed,
+// );
+
+// const sortedByBestPlayersOnline =players.filter(player => player.online).map(player => player.timePlayed).sort((player1, player2) => player2 - player1);
+// console.log(sortedByBestPlayersOnline)
