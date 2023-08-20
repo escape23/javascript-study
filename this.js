@@ -115,27 +115,51 @@
  * Тренируемся 3
  */
 
-const makeChangeColor = function () {
-    const changeColor = function (color) {
-        console.log('changeColor -> this', this);
-        // this.color = color;
-    };
+// const makeChangeColor = function () {
+//     const changeColor = function (color) {
+//         console.log('changeColor -> this', this);
+//         // this.color = color;
+//     };
 
-    // changeColor(); // Какой this ???
+//     // changeColor(); // Какой this ???
 
-    const sweater = {
-        color: 'teal',
-    };
+//     const sweater = {
+//         color: 'teal',
+//     };
 
-    sweater.updateColor = changeColor;
+//     sweater.updateColor = changeColor;
 
-    // sweater.updateColor('red'); // Какой this ???
+//     // sweater.updateColor('red'); // Какой this ???
 
-    return sweater.updateColor;
-};
+//     return sweater.updateColor;
+// };
 
-const swapColor = makeChangeColor();
+// const swapColor = makeChangeColor();
 
-swapColor('blue'); // Какой this ???
+// swapColor('blue'); // Какой this ???
 
-console.log()
+// console.log()
+
+
+
+/*
+ * Тренируемся 4
+ */
+
+// const makeChangeColor = function () {
+//     const changeColor = function (color) {
+//         console.log('changeColor -> this', this);
+//     };
+
+//     return changeColor;
+// };
+
+// const updateColor = makeChangeColor();
+// updateColor('yellow'); // Какой this ???
+
+// const hat = {
+//     color: 'blue',
+//     updateColor: updateColor,
+// };
+
+// hat.updateColor('orange'); // Какой this ???
