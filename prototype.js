@@ -31,12 +31,28 @@
  * - Цепочка прототипов
  */
 
-const objC = {
-  z: 5,
-};
+// const objC = {
+//   z: 5,
+// };
 
-const objB = Object.create(objC)
-objB.y = 2;
+// const objB = Object.create(objC)
+// objB.y = 2;
 
-const objA = Object.create(objB);
-objA.x = 1;
+// const objA = Object.create(objB);
+// objA.x = 1;
+
+// const dummyObj = Object.create({
+//   message : 'Це власна властивість об`єкта',
+// })
+
+// console.log('dummyObj', dummyObj)
+// console.log(dummyObj.message)
+
+
+/*
+ * Алгоритм поиска свойства в цепочке прототипов:
+ * 1. Поиск начинается в собственных свойствах
+ * 2. Если свойства нет в сообственных, поиск переходит к цепочке прототипов
+ * 3. Поиск прекращается при первом совпадении (есть такое свойство)
+ * 4. Возвращается значение свойства
+ */
