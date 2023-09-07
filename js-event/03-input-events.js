@@ -20,7 +20,7 @@ const refs = {
 // refs.input.addEventListener('input', onInputChange)
 
 refs.input.addEventListener('input',onInputChange )
-refs.licenseCheckbox.addEventListener('change',)
+refs.licenseCheckbox.addEventListener('change', onLicenseChange)
 
 // refs.input.addEventListener('input', onInputChange);
 // refs.licenseCheckbox.addEventListener('change', onLicenseChange);
@@ -43,6 +43,8 @@ function onInputChange(event) {
     
 // }
 
-// function onLicenseChange(event) {
-//   refs.btn.disabled = !event.currentTarget.checked;
-// }
+function onLicenseChange(event) {
+    console.log(event.currentTarget.checked)
+    console.log(refs.btn.disabled)
+    refs.btn.disabled = !event.currentTarget.checked;
+}
